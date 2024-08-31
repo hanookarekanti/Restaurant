@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    background-color: rgb(7, 7, 7);
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.home img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    flex: 0 0 10%; /* Make the logo container take up 10% of the navbar */
+}
+
+.logo {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%; /* Make the logo circular */
+    object-fit: cover;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex: 1; /* Make the menu take up the remaining space */
+    justify-content: flex-end; /* Align the menu items to the right */
+}
+
+.menu li {
+    margin-left: 20px;
+    color: rgb(22, 22, 22);
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: rgb(236, 201, 201); /* Set the default background color */
+    transition: background-color 0.3s ease; 
+    border-radius: 15px;
+}
+
+.menu li:hover {
+    background-color: rgb(226, 220, 166); /* Background color on hover */
+    border-radius: 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.taglines {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+}
+
+.tagline {
+    font-size: 40px;
+    color: rgb(248, 247, 247);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid rgb(22, 22, 22); /* Typing cursor effect */
+    animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+    font-family: "Gwendolyn", cursive; /* Apply the custom font */
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+}
+
+.circle_img {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    border: 15px solid rgb(233, 175, 225); /* Add a border */
+    border-radius: 50%;
+    overflow: hidden; /* Hide overflow to keep the circle shape */
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Adjust the size as needed */
+    transition: transform 0.5s ease; /* Smooth transition for hover effect */
+}
+
+.circle_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle_img:hover {
+    transform: translate(-50%, -50%) scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 50px;
+    position: relative;
+}
+
+.about_head {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-350%);
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    font-size: 36px;
+    color: blanchedalmond;
+    text-align: center;
+    line-height: 1.2; /* Adjust line height as needed */
+    margin-bottom: 10px; /* Adjust distance from lines */
+}
+
+
+.about_head::after,
+.about_head::before {
+    content: '';
+    display: block;
+    width: 100px; /* Adjust the width of the lines */
+    height: 3px;
+    background-color: blanchedalmond;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-30%);
+}
+
+.about_head::before {
+    width: 60px; /* Adjust the width of the lines */
+    transform: translateX(-150%);
+}
+
+
+#about_content {
+    color: aliceblue;
+    width: 50%;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.about-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
+    margin: 0;
+}
+
+.about-subtitle {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.about-description {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.about_sideImg {
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.about_sideImg img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.about_sideImg:hover {
+    transform: translateY(5px) rotate(2deg);
+}
+.menu_list {
+    padding: 50px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu_head {
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    font-size: 36px;
+    color: blanchedalmond;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.menu_head::after {
+    content: '';
+    display: block;
+    width: 500px;
+    height: 3px;
+    background-color: blanchedalmond;
+    margin: 10px auto 0;
+}
+
+
+.menu_search {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.menu_search input {
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px 0 0 5px;
+}
+
+.menu_search button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    background-color: rgb(237, 144, 144);
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.menu_search button:hover {
+    background-color: rgb(232, 96, 96);
+}
+
+.menu_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu_item {
+    background-color: rgb(94, 92, 92);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(246, 71, 71, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.menu_item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.menu_details {
+    padding: 25px;
+    text-align: center;
+}
+
+.menu_item h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: white;
+}
+
+.menu_item p {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+.menu_item:hover {
+    transform: translateY(-5px);
+}
+
+.menu_buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.prev-button,
+.next-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    background-color: rgb(237, 144, 144);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: rgb(232, 96, 96);
+}
+
+.booking_head{
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    font-size: 36px;
+    color: blanchedalmond;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 1.2;
+    padding-top: 70px;
+}
+
+.contact_header h1,.booking_head::before,
+.contact_header h1,.booking_head::after {
+    content: '';
+    display: block;
+    width: 500px;
+    height: 3px;
+    background-color: blanchedalmond;
+    margin: 10px auto 0;
+}
+.booking-head::after {
+    width: 60px;
+    transform: translateX(-150%);
+}
+.booking-container form{
+    width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #7a7777;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color:rgb(255, 255, 255);
+}
+
+.booking-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(246, 215, 177);
+}
+
+.booking-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-container label {
+    margin-bottom: 10px;
+}
+
+.booking-container input,
+.booking-container select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.booking-container button,.contact-form button {
+    padding: 10px 20px;
+    margin: auto;
+    font-size: 18px;
+    border:none;
+    background-color: rgb(249, 164, 6);
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.booking-container button:hover, .contact-form button:hover {
+    background-color: rgba(239, 199, 125, 0.774);
+}
+
+/* Your existing CSS styles */
+
+.contact_header h1 {
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    font-size: 36px;
+    color: blanchedalmond;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 1.2;
+    padding-top: 20px;
+}
+
+.contact-details {
+    padding: 0px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-details h2 {
+    color: #7d7a7a;
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-details ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.contact-details li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #666;
+    padding: 10px;
+}
+
+.contact-details .icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.contact-form {
+    background-color: #7a7777;
+    padding: 50px;
+    margin: 50px auto;
+    border-radius: 10px;
+    width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.contact-form h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255);
+    color: #fff;
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* .contact-form button {
+    padding: 14px 24px;
+    font-size: 18px;
+    border: none;
+    background-color: rgb(249, 164, 6);
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+    width: 200px;
+    text-align: center;
+} */
+
+
+/* Your existing footer styles */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto;
+}
